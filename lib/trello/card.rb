@@ -1,7 +1,7 @@
 module Trello
   # A Card is a container that can house checklists and comments; it resides inside a List.
   class Card < BasicData
-    attr_reader   :id
+    attr_reader   :id, :short_id
     attr_accessor :name, :description, :closed, :url, :board_id, :member_ids, :list_id
 
     class << self
@@ -24,6 +24,7 @@ module Trello
     # a card.
     def update_fields(fields)
       @id          = fields['id']
+      @short_id    = fields['idShort']
       @name        = fields['name']
       @description = fields['desc']
       @closed      = fields['closed']
