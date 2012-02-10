@@ -1,7 +1,7 @@
 module Trello
   # Action represents some event that occurred. For instance, when a card is created.
   class Action < BasicData
-    attr_reader :id, :type, :data, :member_creator_id
+    attr_reader :id, :type, :data, :member_creator_id, :date
 
     class << self
       # Locate a specific action and return a new Action object.
@@ -19,6 +19,7 @@ module Trello
       @type              = fields['type']
       @data              = fields['data']
       @member_creator_id = fields['idMemberCreator']
+      @date              = fields['date']
       self
     end
 

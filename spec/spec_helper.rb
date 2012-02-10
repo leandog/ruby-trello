@@ -135,7 +135,8 @@ module Helpers
           "name"        => "Assembler"
         }
       },
-      "type"            => "createCard"
+      "type"            => "createCard",
+      "date"            => "2012-02-02T16:53:55.871Z"
     }]
   end
 

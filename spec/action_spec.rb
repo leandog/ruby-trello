@@ -24,6 +24,10 @@ module Trello
         @action.type.should == @detail['type']
       end
 
+      it "gets its date" do
+        @action.date.should == @detail['date']
+      end
+
       it "has the same data" do
         @action.data.should == @detail['data']
       end
